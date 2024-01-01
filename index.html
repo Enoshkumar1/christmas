@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Virtual Christmas Crib</title>
+    <link rel="stylesheet" href="./style.css">
+    <audio src="./assets/song.mp3" id="my_audio" autoplay></audio>
+</head>
+<style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+</style>
+<body>
+
+    <section class="stage">
+        <div id="home" class="div"><a href="#" id="homep" class="p">Home</a></div>
+        <div class="div cstm2" id="about"><a class="p ">About</a>
+        </div>
+        <div class="div cstm4" id="contact"><a class="p ">Gallery</a>
+        </div>
+        <div class="div cstm3" id="gallery"><a class="p ">Contact</a>
+        </div>
+      </section>
+
+    <div class="cstm1">
+        <h1 >Happy Christmas and New Year</h1>
+    </div>
+    
+    <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="text/javascript">
+         function playAudio() {
+        var audio = document.getElementById("my_audio");
+        audio.play()
+            .then(() => {
+                console.log("Audio is playing");
+            })
+            .catch(error => {
+                console.error("Error playing audio:", error.message);
+            });
+
+        // Remove the click event listener after the first click to avoid issues
+        document.removeEventListener('click', playAudio);
+    }
+
+    // Add a click event listener to play audio when the user clicks anywhere on the document
+    document.addEventListener('click', playAudio);
+    </script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

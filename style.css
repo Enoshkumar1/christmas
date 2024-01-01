@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Rubik+Moonrocks&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  display: flex;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: #000;
+}
+.stage{
+  display: flex;
+  position: fixed;
+  height: 350px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 55%;
+}
+.p{
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0;
+  cursor: pointer;
+  width: 100%;
+  background: #78FED6;
+  border-radius: 15px;
+  font-family: 'Rubik Moonrocks', serif;
+  letter-spacing: 1px;
+}
+.div{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 200px;
+  height: 29px;
+  margin-top: 4%;
+  transition-duration: 0.2s;
+}
+.p:hover{
+  background: #27bf92;
+  color: black;
+}
+.div:nth-child(odd){
+  transform: perspective(300px) rotateY(45deg);
+  box-shadow: -2px 2px 7px cyan;
+}
+.div:nth-child(even){
+  transform: perspective(300px) rotateY(-45deg);
+  box-shadow: 2px 2px 7px chartreuse;
+}
+.div:hover{
+  transform: rotateY(0);
+  background: white;
+  color: black;
+  box-shadow: 0px 0px 0px;
+}
+.cstm1{
+  display: flex;
+  z-index: 2; 
+  position: fixed; 
+  color: aqua; 
+  left: 32%;
+  top: 87%;
+}
+
+@media screen and (max-width:750px)  {
+  .p{
+    font-size: 20px;
+  }
+  .stage{
+    left: 40%;
+  }
+  .cstm1{
+    left: 20%;
+  }
+}
+
+@media screen and (max-width:650px)  {
+  .p{
+    font-size: 18px;
+  }
+  .stage{
+    left: 30%;
+  }.cstm1{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:400px)  {
+  .p{
+    font-size: 16px;
+  }
+  .stage{
+    left: 1%;
+  }
+  .cstm2{
+    margin-left: -10px;
+  }
+  .div{
+    height: 18px;
+  }
+  .cstm3{
+    margin-left: -20px;
+  }
+  .cstm4{
+    margin-left: 10px;
+  }
+  .cstm1{
+    font-size: 12px;
+    left: 5%;
+    text-align: center;
+  }
+}
+@media screen and (max-width:310px)  {
+  .cstm4{
+    margin-left: -5px;
+  }
+  .stage{
+    left: -3%;
+  }
+}
